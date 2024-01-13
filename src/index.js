@@ -3,7 +3,6 @@ import clearContent from './clear.js';
 import renderDish from './kitchen.js';
 
 const ulElement = document.querySelector('ul');
-console.log(buttons);
 
 ulElement.addEventListener('click', (event) => {
     const targetLi = event.target.closest('li');
