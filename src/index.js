@@ -4,7 +4,7 @@ import renderDish from './kitchen.js';
 
 const ulElement = document.querySelector('ul');
 
-ulElement.addEventListener('click', (event) => {
+ulElement.addEventListener('touchend', (event) => {
     const targetLi = event.target.closest('li');
     if (targetLi) {
         const index = Array.from(ulElement.children).indexOf(targetLi);
