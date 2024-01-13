@@ -11,11 +11,14 @@ ulElement.addEventListener('click', (event) => {
         clearContent();
         if (index === 0) {
             renderDish('pizza');
+            alert('pizza');
         } else if (index === 1) {
             renderDish('burger');
+            alert('burger');
         } else if (index === 2) {
             console.log(index);
             renderDish('sushi');
+            alert('sushi');
         }
     }
 });
