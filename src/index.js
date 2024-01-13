@@ -2,11 +2,13 @@ import './style.css';
 import clearContent from './clear.js';
 import renderDish from './kitchen.js';
 
-const buttons = document.querySelectorAll('li')
+const ulElement = document.querySelector('ul');
 console.log(buttons);
 
-buttons.forEach((item, index) => {
-    item.addEventListener('click', () => {
+ulElement.addEventListener('click', (event) => {
+    const targetLi = event.target.closest('li');
+    if (targetLi) {
+        const index = Array.from(ulElement.children).indexOf(targetLi);
         clearContent();
         if (index === 0) {
             renderDish('pizza');
@@ -16,7 +18,7 @@ buttons.forEach((item, index) => {
             console.log(index);
             renderDish('sushi');
         }
-    });
+    }
 });
 
-renderDish('sushi')
+renderDish('pizza')
